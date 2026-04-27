@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 import json
+import os
 from pathlib import Path
 
 # ── Page config ──────────────────────────────────────────
@@ -78,7 +79,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ── Backend URL ──────────────────────────────────────────
-BACKEND_URL = "http://127.0.0.1:8000"
+BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
 
 
 def call_extract_api(uploaded_file) -> dict:

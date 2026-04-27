@@ -7,7 +7,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-pytesseract.pytesseract.tesseract_cmd = os.getenv("TESSERACT_PATH")
+tesseract_path = os.getenv("TESSERACT_PATH")
+if tesseract_path:
+    pytesseract.pytesseract.tesseract_cmd = tesseract_path
 
 
 def preprocess_image(image_path: str) -> np.ndarray:
