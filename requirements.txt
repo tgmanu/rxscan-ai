@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-multipart
+pytesseract
+opencv-python
+pillow
+pdf2image
+groq
+requests
+python-dotenv
+streamlit
+reportlab
